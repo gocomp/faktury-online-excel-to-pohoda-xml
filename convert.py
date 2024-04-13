@@ -82,7 +82,6 @@ for row in sheet.iter_rows(min_row=6):
         new_xml_data += '<inv:roundingDocument>none</inv:roundingDocument>\n'
         new_xml_data += '<inv:roundingVAT>none</inv:roundingVAT>\n'
         new_xml_data += '<inv:homeCurrency>\n'
-        new_xml_data += '<typ:priceNone>0</typ:priceNone>\n'
         if row[5].value is not None:
             if float(row[5].value) == round(float(row[4].value) * 1.2, 2):
                 new_xml_data += '<typ:priceHigh>' + str(row[4].value) + '</typ:priceHigh>\n'
